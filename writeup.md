@@ -15,9 +15,9 @@ The goals / steps of this project are the following:
 
 [//]: # (Image References)
 [image1]: ./output_images/Color_channels.png
-[image2]: ./output_images/Color_channels_notcar.jpg
-[image3]: ./output_images/sliding_windows.jpg
-[image4]: ./test/sliding_window.jpg
+[image2]: ./output_images/Color_channels_notcar.png
+[image3]: ./output_images/sliding_windows.png
+[image4]: ./test/sliding_window.png
 [video1]: ./project_video.mp4
 
 
@@ -53,7 +53,7 @@ The process of choosing of the `skimage.hog()` parameters has not been straightf
 
 #### 3. Describe how (and identify where in your code) you trained a classifier using your selected HOG features (and color features if you used them).
 
-I trained a linear SVM using C=0.01 in order to add regularization and reduce variance. I used the `LinearSVM` method instead `SVM`, because it implements liblinear instead on libsvm, proving to be more efficient for the current problem numerosity. The test accuracy was already quite satisfactory, not justifying the use of more complicated and slower approaches (e.g. non linear SVM).
+I trained a linear SVM using C=0.01 in order to add regularization and reduce variance. I used the `LinearSVM` method instead of `SVM`, because it implements liblinear instead on libsvm, proving to be more efficient for the current problem numerosity. The test accuracy was already quite satisfactory, not justifying the use of more complicated and slower approaches (e.g. non linear SVM).
 It is also important to observe that the entire pipeline should work real-time in deployment (after compiling), that's why I've measured also the average realtime % over 25 samples (considering 25 fps). See the `#train and test` cell to check the cocde.
 The training accuracy has been 99.99% and the test accuracy 98.2% (this is actually a dev set accuracy). This numbers are nevertheless optimistic to predict the actual performance on the project output. Mentioning Andrew Ng's - structuring a machine learning project (Coursera) "dev and test sets should come from the same distribution". This is not the case, or not completely.
 That's why adding spatially binned color and histograms of color in the feature vector, didn't seem to improve much the test accuracy, but proved to be quite effective for the pipeline result.
