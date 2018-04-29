@@ -17,7 +17,7 @@ The goals / steps of this project are the following:
 [image1]: ./output_images/Color_channels.png
 [image2]: ./output_images/Color_channels_notcar.png
 [image3]: ./output_images/sliding_windows.png
-[image4]: ./test/sliding_window.png
+[image4]: ./output_images/test.png
 [video1]: ./project_video.mp4
 
 
