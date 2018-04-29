@@ -74,8 +74,7 @@ Here's the performance of the pipeline on the test images.
 
 ![alt text][image4]
 
- From the positive detections I created a heatmap and then thresholded that map to identify vehicle positions.  I then used `scipy.ndimage.measurements.label()` to identify individual blobs in the heatmap.  I then assumed each blob corresponded to a vehicle.  I constructed bounding boxes to cover the area of each blob detected. See cell `# find cars test` for reference
- The test figure 2 shows a false positive, but this will be furtherly solved on the video pipeline with a further filtering action.
+ From the positive detections I created a heatmap and then thresholded that map to identify vehicle positions.  I then used `scipy.ndimage.measurements.label()` to identify individual blobs in the heatmap.  I then assumed each blob corresponded to a vehicle.  I constructed bounding boxes to cover the area of each blob detected. See cell `# find cars test` for reference. The test figure 2 shows a false positive, but this will be furtherly solved on the video pipeline with a further filtering action.
 
 ---
 
